@@ -1,0 +1,21 @@
+.logo {
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+    padding-left: 20px;
+}
+.header{
+    display: flex;
+    border-bottom: 2px rgba(218,255,14,1) solid;
+}
+.logo__title{
+    list-style: none;
+    font-family: 'Fredoka One';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    padding-top: 14px;
+    padding-left: 10px;
+    transition: .2s all;
+    margin: 0;
+}

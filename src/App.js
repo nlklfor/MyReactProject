@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
+import Profile from './components/Profile/Profile';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <ul>
-          <li>
-            HTML
-          </li>
-          <li>
-            CSS
-          </li>
-          <li>
-            JAVASCRIPT
-          </li>
-        </ul>
-      </header>
+    <div className='wrapper'>
+      <Header />
+      <Navigation />
+      <Profile />
     </div>
   );
 }
+
+
 
 export default App;

@@ -1,0 +1,44 @@
+.nav {
+    background-color: rgb(237, 255, 209) ;
+    width: 400px;
+    border-right: 2px rgb(217, 255, 3) solid;
+    
+}
+
+.nav__link {
+    background-color: white;
+    border-radius: 20px;
+    width: 250px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.nav__link {
+    list-style: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    transition: .2s all;
+    
+    
+}
+
+.nav__item {
+    text-decoration: none;
+    color: black;
+    transition: .2s all;
+    
+}
+
+.item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a:hover,
+a:focus,
+a:active {
+
+    color: rgba(164, 221, 8, 0.849);
+}

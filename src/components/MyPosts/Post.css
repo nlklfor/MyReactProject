@@ -1,0 +1,13 @@
+.post__wrapper img {
+    width: 70px;
+    
+    border-radius: 50%;
+}
+
+.post__wrapper {
+    display: flex;
+}
+.post__desc{
+    display: flex;
+    text-align: center;
+}
