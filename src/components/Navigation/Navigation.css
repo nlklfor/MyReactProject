@@ -42,3 +42,7 @@ a:active {
 
     color: rgba(164, 221, 8, 0.849);
 }
+
+.nav__item.active{
+    color: rgb(0, 168, 112);
+}

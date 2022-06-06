@@ -7,7 +7,7 @@ const Profile = () => {
     return (
         <div className="content">
             <div className="content__background">
-                <img src="https://oir.mobi/uploads/posts/2021-06/1623928173_9-oir_mobi-p-prelesti-prirodi-priroda-krasivo-foto-9.jpg" className="profile__background" alt=""></img>
+                <img src="https://i.ytimg.com/vi/LF0HZVTfBXQ/maxresdefault.jpg" className="profile__background" alt=""></img>
             </div>
             <div className="content__profile">
                 <div className="profile__pic">

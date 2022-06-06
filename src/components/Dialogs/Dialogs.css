@@ -1,0 +1,30 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialog__list{
+    border-right: 1px green solid;
+}
+.dialog__list-item{
+    padding:10px 20px;
+}
+.dialog__list-item_name.active{
+    color: rgb(97, 255, 181);
+}
+.dialog__list-item_name{
+    text-decoration: none;
+    color: rgb(21, 51, 26);
+}
+
+.messages{
+    
+}
+.messages__content{
+    padding: 5px 20px;
+}
+.dialog__list-item_name:hover,
+.dialog__list-item_name:focus,
+.dialog__list-item_name:active {
+
+    font-weight: bold;
+}
