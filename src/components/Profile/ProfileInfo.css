@@ -1,0 +1,40 @@
+.profile__info-name {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+.profile__info {
+    list-style: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    transition: .2s all;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.prof__pic {
+    margin-top: 30px;
+    margin-left: 30px;
+    border: 3px pink solid;
+    width: 200px;
+    height: 200px;
+}
+
+.content__profile {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.profile__background {
+    height: 300px;
+    width: 1000px;
+}
+.profile__desc{
+    display: flex;
+}
