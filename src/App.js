@@ -20,8 +20,8 @@ const App = (props) => {
         <Header />
         <Navigation />
         <Routes>
-          <Route path="/profile" element={<Profile postsData={props.postsData} />} />
-          <Route path="/dialogs" element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+          <Route path="/profile" element={<Profile state={props.state.profileState} addPost={props.addPost} />} />
+          <Route path="/dialogs" element={<Dialogs state={props.state.dialogsState} />} />
           <Route path="/news" element={<News />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/music" element={<Music />} />

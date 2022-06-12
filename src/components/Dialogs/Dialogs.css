@@ -6,6 +6,7 @@
     border-right: 1px green solid;
 }
 .dialog__list-item{
+    display: flex;
     padding:10px 20px;
 }
 .dialog__list-item_name.active{
@@ -13,9 +14,14 @@
 }
 .dialog__list-item_name{
     text-decoration: none;
+    margin: 0 auto;
+    padding-top: 10px;
     color: rgb(21, 51, 26);
 }
-
+.dialog__list-item_avatar{
+    width: 50px;
+    border-radius: 50%;
+}
 .messages{
     
 }

@@ -8,7 +8,7 @@ const Profile = (props) => {
     return (
         <div className="content">
             <ProfileInfo name="Nikita" dob="30.05.2003" aducation="National Aviation University" website="https://allbyourselves.ru/" />
-            <MyPosts postsData={props.postsData}/>
+            <MyPosts postsData={props.state.postsData} addPost={props.addPost}/>
         </div>
     )
 }

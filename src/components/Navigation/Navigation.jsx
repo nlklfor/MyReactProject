@@ -21,6 +21,9 @@ const Navigation = () => {
                 <li className="nav__link-settings item">
                     <NavLink to="/settings" className="nav__item">Settings</NavLink>
                 </li>
+                <li className="nav__link-friends item">
+                    <NavLink to="/" className="nav__item">Friends</NavLink>
+                </li>
             </ul>
         </div>
     )
