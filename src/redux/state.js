@@ -4,7 +4,8 @@ let state = {
     profileState: {
         postsData: [
             { id: 1, message: "NePon😐", image: 'https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png' }
-        ]
+        ],
+        newPostText: "golden state"
     },
     dialogsState: {
         dialogsData: [
@@ -24,16 +25,22 @@ let state = {
     } 
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let addNewPost = {
         id: 1,
-        message:  postMessage ,
+        message:  state.profileState.newPostText ,
         image: "https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png"
     }
 
     state.profileState.postsData.push(addNewPost);
+    state.profileState.newPostText = '';
     renderTheWholeTree(state);
-    debugger;
+};
+
+export let updatePostText = (newText) => {
+    
+    state.profileState.newPostText = newText;
+    renderTheWholeTree(state);
 };
 
 export default state;

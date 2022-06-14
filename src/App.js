@@ -13,6 +13,7 @@ import News from './components/News/News'
 
 
 
+
 const App = (props) => {
   return (
     <BrowserRouter>
@@ -20,8 +21,8 @@ const App = (props) => {
         <Header />
         <Navigation />
         <Routes>
-          <Route path="/profile" element={<Profile state={props.state.profileState} addPost={props.addPost} />} />
-          <Route path="/dialogs" element={<Dialogs state={props.state.dialogsState} />} />
+          <Route path="/profile" element={<Profile profileState={props.state.profileState} addPost={props.addPost} updatePostText={props.updatePostText} />} />
+          <Route path="/dialogs" element={<Dialogs dialogsState={props.state.dialogsState} />} />
           <Route path="/news" element={<News />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/music" element={<Music />} />
