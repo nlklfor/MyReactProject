@@ -4,8 +4,8 @@ import "./../Dialogs.css"
 const Message = (props) => {
     let NewMessage = React.createRef()
     let sendMessage = () => {
-        let showNewMessage = NewMessage.current.value
-        alert(showNewMessage);
+        // let showNewMessage = NewMessage.current.value
+        alert(NewMessage.current.value);
     }
     return (
         <div className="messages">

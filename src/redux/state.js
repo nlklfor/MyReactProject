@@ -1,10 +1,9 @@
+import {renderTheWholeTree} from "../render"
+
 let state = {
     profileState: {
         postsData: [
-
-            { id: 1, message: "This team will never trade ⬇", image: 'https://www.si.com/.image/t_share/MTY4NDk3MTA3MjYyNzc3MTEw/joel-embiid.png' },
-            { id: 2, message: "Joel chmo", image: 'https://www.kindpng.com/picc/m/104-1042894_transparent-lebron-james-face-png-stephen-curry-face.png' },
-            { id: 3, message: "NePon😐", image: 'https://www.si.com/.image/t_share/MTY4NDk3MTA3MjYyNzc3MTEw/joel-embiid.png' }
+            { id: 1, message: "NePon😐", image: 'https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png' }
         ]
     },
     dialogsState: {
@@ -22,25 +21,19 @@ let state = {
             { id: 3, message: "Ta niche" },
             { id: 4, message: "Pon😐😐😐" }
         ]
-    }
-
-
-
-
-
-
+    } 
 }
 
 export let addPost = (postMessage) => {
     let addNewPost = {
         id: 1,
-        message: { postMessage },
+        message:  postMessage ,
         image: "https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png"
     }
 
     state.profileState.postsData.push(addNewPost);
+    renderTheWholeTree(state);
+    debugger;
 };
-
-
 
 export default state;
