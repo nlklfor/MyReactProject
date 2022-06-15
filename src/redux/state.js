@@ -1,5 +1,7 @@
-import {renderTheWholeTree} from "../render"
-
+// import {renderTheWholeTree} from "../render"
+let renderTheWholeTree = () => {
+    console.log("State is changed")
+}
 let state = {
     profileState: {
         postsData: [
@@ -22,25 +24,28 @@ let state = {
             { id: 3, message: "Ta niche" },
             { id: 4, message: "Pon😐😐😐" }
         ]
-    } 
+    }
 }
 
-export let addPost = () => {
+export const addPost = () => {
     let addNewPost = {
         id: 1,
-        message:  state.profileState.newPostText ,
+        message: state.profileState.newPostText,
         image: "https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png"
     }
 
     state.profileState.postsData.push(addNewPost);
     state.profileState.newPostText = '';
-    renderTheWholeTree(state);
+    renderTheWholeTree();
 };
+export const updatePostText = (newText) => {
 
-export let updatePostText = (newText) => {
-    
     state.profileState.newPostText = newText;
-    renderTheWholeTree(state);
+    renderTheWholeTree();
 };
+export const subscribe = (observer) => {
+    renderTheWholeTree = observer;
+}
+
 
 export default state;
