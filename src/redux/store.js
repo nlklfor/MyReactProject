@@ -1,6 +1,6 @@
 
 let store = {
-    renderTheWholeTree() {
+    _renderTheWholeTree() {
         console.log("State is changed")
     },
     _state: {
@@ -33,23 +33,38 @@ let store = {
     subscribe(observer) {
         this.renderTheWholeTree = observer;
     },
-    addPost() {
-        let addNewPost = {
-            id: 2,
-            message: this._state.profileState.newPostText,
-            image: "https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png"
+    // addPost() {
+    //     let addNewPost = {
+    //         id: 2,
+    //         message: this._state.profileState.newPostText,
+    //         image: "https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png"
+    //     }
+
+    //     this._state.profileState.postsData.push(addNewPost);
+    //     this._state.profileState.newPostText = '';
+    //     this.renderTheWholeTree(this._state);
+    // },
+    // updatePostText(newText) {
+
+    //     this._state.profileState.newPostText = newText;
+    //     this.renderTheWholeTree(this._state);
+    // },
+    dispatch(action) {
+        if (action.type === "ADD-POST") {
+            let addNewPost = {
+                id: 2,
+                message: this._state.profileState.newPostText,
+                image: "https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png"
+            }
+
+            this._state.profileState.postsData.push(addNewPost);
+            this._state.profileState.newPostText = '';
+            this.renderTheWholeTree(this._state);
+        } else if (action.type === "UPDATE-POST-TEXT") {
+            this._state.profileState.newPostText = action.newText;
+            this.renderTheWholeTree(this._state);
         }
-
-        this._state.profileState.postsData.push(addNewPost);
-        this._state.profileState.newPostText = '';
-        this.renderTheWholeTree(this._state);
-    },
-    updatePostText(newText) {
-
-        this._state.profileState.newPostText = newText;
-        this.renderTheWholeTree(this._state);
-    },
-
+    }
 }
 
 

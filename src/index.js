@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 let renderTheWholeTree = (state) => {
     root.render(
         <React.StrictMode>
-            <App state={state} addPost={store.addPost.bind(store)} updatePostText={store.updatePostText.bind(store)} />
+            <App state={state} dispatch={store.dispatch.bind(store)} />
         </React.StrictMode>
     );
 }

@@ -6,12 +6,14 @@ const MyPosts = (props) => {
     let postsElements = props.postsData.map((post) => <Post image={post.image} message={post.message} key={post.id} />)
     let newPost = React.createRef();
     let addPost = () => {
-        props.addPost();
+        // props.addPost();
+        props.dispatch({type: "ADD-POST"});
         
     }
     let changePostText = () => {
         let text = newPost.current.value
-        props.updatePostText(text)
+        // props.updatePostText(text)
+        props.dispatch({type: "UPDATE-POST-TEXT" , newText: text});
         
         // console.log(newPost.current.value)
     }
