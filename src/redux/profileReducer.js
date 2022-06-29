@@ -1,8 +1,15 @@
 const ADD_POST = "ADD-POST";
-const UPDATE_POST_TEXT = "UPDATE-POST-TEXT"; 
+const UPDATE_POST_TEXT = "UPDATE-POST-TEXT";
+
+let initialState = {
+    postsData: [
+        { id: 1, message: "NePon😐", image: 'https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png' }
+    ],
+    newPostText: "",
+}
 
 
-const profileReducer = (state, action) => {
+const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
             let addNewPost = {
