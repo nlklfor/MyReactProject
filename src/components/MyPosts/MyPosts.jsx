@@ -2,8 +2,8 @@
 import React from "react";
 import Post from "../MyPosts/Post/Post";
 import "./MyPosts.css";
-import { addPostActionCreator } from "../../redux/store";
-import { updatePostTextActionCreator } from "../../redux/store";
+import { addPostActionCreator, updatePostTextActionCreator } from "../../redux/profileReducer";
+
 
 
 
@@ -18,17 +18,17 @@ const MyPosts = (props) => {
     }
     let changePostText = () => {
         let text = newPost.current.value
-        // props.updatePostText(text)
         let action = updatePostTextActionCreator(text);
         props.dispatch(action);
         
+        // props.updatePostText(text)
         // console.log(newPost.current.value)
     }
 
     return (
         <div className="posts">
             My Posts
-            <textarea onChange={changePostText} ref={newPost} value={props.newPostText} placeholder="Сделайте новый пост!" />
+            <textarea onChange={changePostText} ref={newPost} value={props.newPostText} placeholder="Make a new post!" />
             <button onClick={addPost} className="posts__btn-add">Add post</button>
             <div className="posts_added">
                 {postsElements}
