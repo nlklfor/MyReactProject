@@ -2,7 +2,7 @@ import React from "react";
 import SingleDialog from "./SingleDialog/SingleDialog";
 import Message from "./Message/Message";
 import "./Dialogs.css"
-import { addMesssageActionCreator, updateMessageTextActionCreator } from "../../redux/dialogReducer";
+
 
 
 const Dialogs = (props) => {
@@ -11,14 +11,11 @@ const Dialogs = (props) => {
     let messagesElements = props.dialogsState.messagesData.map((everyMessage) => <Message message={everyMessage.message} key={everyMessage.id} />)
     let NewMessage = React.createRef()
     let sendMessage = () => {
-        props.dispatch(addMesssageActionCreator());
-        // let showNewMessage = NewMessage.current.value
-        // alert(showNewMessage);
+        props.OnSendMessage();
     }
     let changeMessageText = () => {
         let message = NewMessage.current.value;
-        let action = updateMessageTextActionCreator(message);
-        props.dispatch(action)
+        props.OnChangeMessageText(message)
     }
 
     return (
