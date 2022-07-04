@@ -9,7 +9,7 @@ const Profile = (props) => {
     return (
         <div className="content">
             <ProfileInfo name="Nikita" dob="30.05.2003" aducation="National Aviation University" website="https://allbyourselves.ru/" />
-            <MyPostsContainer store={props.store} />
+            <MyPostsContainer />
         </div>
     )
 }

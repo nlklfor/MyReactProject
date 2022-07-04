@@ -6,13 +6,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import StoreContext from './API/StoreContext';
+import { BrowserRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let renderTheWholeTree = (state) => {
     root.render(
         <React.StrictMode>
-            <App state={state} store={store} dispatch={store.dispatch.bind(store)} />
+            <BrowserRouter>
+                <StoreContext.Provider value={store}>
+                    <App />
+                </StoreContext.Provider>
+            </BrowserRouter>
         </React.StrictMode>
     );
 }
