@@ -11,11 +11,11 @@ const Dialogs = (props) => {
     let messagesElements = props.dialogsState.messagesData.map((everyMessage) => <Message message={everyMessage.message} key={everyMessage.id} />)
     let NewMessage = React.createRef()
     let sendMessage = () => {
-        props.OnSendMessage();
+        props.onSendMessage();
     }
     let changeMessageText = () => {
         let message = NewMessage.current.value;
-        props.OnChangeMessageText(message)
+        props.onChangeMessageText(message)
     }
 
     return (

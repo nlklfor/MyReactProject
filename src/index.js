@@ -11,7 +11,6 @@ import { Provider } from 'react-redux';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let renderTheWholeTree = (state) => {
     root.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -21,11 +20,11 @@ let renderTheWholeTree = (state) => {
             </BrowserRouter>
         </React.StrictMode>
     );
-}
 
-renderTheWholeTree(store.getState());
-store.subscribe(() => {
-    let state = store.getState()
-    renderTheWholeTree(state);
-});
+
+// renderTheWholeTree(store.getState());
+// store.subscribe(() => {
+//     let state = store.getState()
+//     renderTheWholeTree(state);
+// });
 reportWebVitals();

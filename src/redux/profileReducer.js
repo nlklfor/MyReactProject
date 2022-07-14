@@ -10,6 +10,10 @@ let initialState = {
 
 
 const profileReducer = (state = initialState, action) => {
+
+    let copyState = { ...state };
+    copyState.postsData = [...state.postsData];
+
     switch (action.type) {
         case ADD_POST:
             let addNewPost = {
@@ -17,12 +21,15 @@ const profileReducer = (state = initialState, action) => {
                 message: state.newPostText,
                 image: "https://dthezntil550i.cloudfront.net/kg/latest/kg1802132010216500004834729/1280_960/557d644f-12f3-49e1-bb66-23c16400540d.png"
             }
-            state.postsData.push(addNewPost);
-            state.newPostText = '';
-            return state;
+            copyState.postsData.push(addNewPost);
+            copyState.newPostText = '';
+            return copyState;
+
+
         case UPDATE_POST_TEXT:
-            state.newPostText = action.newText;
-            return state;
+            copyState.newPostText = action.newText;
+            return copyState;
+
 
         default: return state;
     }
